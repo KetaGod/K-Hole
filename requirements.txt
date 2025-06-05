@@ -1,0 +1,7 @@
+aiohttp
+aiohttp-socks
+cloudscraper
+colorama
+dnspython
+fake-useragent
+stem
