@@ -84,8 +84,8 @@ J__L \__L     J__L  J__LJ\______/FJ________LJ________L
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourname/khole.git
-cd khole
+git clone https://github.com/KetaGod/K-Hole.git
+cd K-Hole
 ```
 
 ### 2. Install Python requirements
@@ -146,8 +146,7 @@ Displays ongoing metrics for HTTP/TCP/UDP/amplification/etc.
 
 Supports:
 
-* `aiohttp`, `aiocoap`
-* `requests`, `cloudscraper`, `websockets`
+* `aiohttp`, `requests`, `cloudscraper`, `websockets`
 * `stem`, `ipaddress`, `dnspython`
 * `selenium`, `undetected_chromedriver`
 * And many others
@@ -167,5 +166,3 @@ Supports:
 Coded by **♡KetaGod♡**
 
 * [Telegram](https://t.me/ketagod)
-
-Special thanks to all open-source contributors and module authors.
