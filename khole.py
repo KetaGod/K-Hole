@@ -1472,20 +1472,6 @@ def show_utilities_menu():
         ("Interactive Header Builder", interactive_header_builder)
     ]
     show_method_list("Utilities", utilities)
-    while True:
-        print("\nUtilities:")
-        print("[1] TOR IP Renewal")
-        print("[2] Port Scanner")
-        print("[99] Back to Main Menu")
-        choice = input("Choose an option: ")
-        if choice == "1":
-            tor_ip_renewal()
-        elif choice == "2":
-            port_scanner()
-        elif choice == "99":
-            return
-        else:
-            print("Invalid option")
 
 def show_layer4_methods():
     methods = [
@@ -1535,36 +1521,15 @@ def show_amplification_methods():
     show_method_list("Amplification Methods", methods)
 
 def show_recon_tools_menu():
-    print("\n[Recon Tools Menu]")
     methods = [
         ("Reverse DNS & ASN Lookup", reverse_dns_asn_lookup),
         ("WHOIS Lookup", whois_lookup),
         ("IP Range Scanner", ip_range_scanner),
         ("IP Resolver", real_ip_resolver),
-        ("Go Back", None)
     ]
-
-    for index, (label, _) in enumerate(methods, 1):
-        print(f"[{index}] {label}")
-
-    while True:
-        try:
-            choice = int(input("\nChoose a tool: "))
-            if choice == len(methods):
-                print("Returning to previous menu...")
-                return
-            elif 1 <= choice < len(methods):
-                func = methods[choice - 1][1]
-                if func:
-                    func()
-                break
-            else:
-                print("Invalid option")
-        except  ValueError:
-            print("Enter a valid option")
+    show_method_list("Recon Tools", methods)
 
 def show_misc_menu():
-    print("\n[Misc Tools]")
     methods = [
         ("Auto-Config Profiles", load_config_profile),
         ("Chain Attacks", chain_attacks),
@@ -1577,28 +1542,9 @@ def show_misc_menu():
         ("JA3/TLS Fingerprint Generator", ja3_tls_fingerprint_generator),
         ("CDN Detection", cdn_detection),
         ("Auto Retry on 403/429", retry_request_with_backoff),
-        ("Web App Attack Tools", web_app_attack_tools)
+        ("Web App Attack Tools", web_app_attack_tools),
     ]
-
-    for index, (label, _) in enumerate(methods, 1):
-        print(f"[{index}] {label}")
-
-    while True:
-        try:
-            choice = int(input("\nChoose a tool: "))
-            if choice == len(methods):
-                print("Returning to previous menu...")
-                return
-            elif 1 <= choice < len(methods):
-                func = methods[choice - 1][1]
-                if func:
-                    func()
-                break
-            else:
-                print("Invalid option")
-        except  ValueError:
-            print("Enter a valid option")
-
+    show_method_list("Misc", methods)
 
 def show_method_list(title, methods):
     while True:
@@ -1617,7 +1563,6 @@ def show_method_list(title, methods):
                 print("Invalid option")
         except ValueError:
             print("Invalid option")
-
 
 print(ascii_logo)
 
