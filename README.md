@@ -1,99 +1,171 @@
-# K-HOLE - KJI's DoS and Stress Testing Toolkit
+```
+   _  _           _  _      ____      _         ____   
+  FJ / ;         FJ  L]    F __ ]    FJ        F ___J  
+ J |/ (| ______ J |__| L  J |--| L  J |       J |___:  
+ |     L|______||  __  |  | |  | |  | |       | _____| 
+ F L:\  L______JF L__J J  F L__J J  F L_____  F L____: 
+J__L \__L     J__L  J__LJ\______/FJ________LJ________L
+|__L  \L_|     |__L  J__| J______F |________||________|
+```
 
-K-HOLE is a powerful and extensible CLI-based network stress testing toolkit designed for **authorized testing** of your own infrastructure. This tool supports a wide variety of Layer 4 and Layer 7 attack methods for load testing, benchmarking, and simulation purposes.
+# K-HOLE
 
-> 🚨 **Legal Notice:** This tool is intended **ONLY** for use on systems you own or have explicit permission to test. Unauthorized use is illegal and unethical.
+**K-HOLE** is an advanced, multi-method network testing and stress simulation toolkit written in Python. Designed for red-team simulations, infrastructure testing, and protocol research, K-HOLE supports a wide range of L4 and L7 methods, recon tools, web vulnerability testers, IoT flooders, and much more.
+
+> ⚠️ **Use K-HOLE only in environments you own or have explicit permission to test.**
 
 ---
 
-## 🚀 Features
+## 📦 Features Overview
 
-```
-╔═════════════════════════════════════════════════════════════╗
-║       K-HOLE - KJI's DoS and Stress Testing Toolkit         ║
-║          Coded by KetaGod | https://t.me/ketagod            ║
-║ ➤ HTTP(S) & Async Flooding     ➤ TOR Identity Cycling      ║
-║ ➤ UDP / TCP Flood              ➤ JS Challenge Bypass       ║
-║ ➤ Slowloris                    ➤ DNS/NTP/SSDP Amplify      ║
-║ ➤ Custom Payload Injection     ➤ Layer 7/4 Attacks         ║
-║ ➤ Real-Time Stats              ➤ Target Scanner            ║
-╚═════════════════════════════════════════════════════════════╝
-```
+### 🔥 Layer 7 (L7) Attack Methods
+
+* HTTP Flood (Sync & Async)
+* WebSocket Flood
+* Browser Emulation (Headless Chrome)
+* Slowloris
+* JS Challenge Bypass (Cloudflare)
+* RUDY (R-U-Dead-Yet)
+* Custom Header Flood
+* SSL Renegotiation Attack
+* SMTP Abuse, WebDAV PUT Abuse
+* SQL Slam Injection Burst
+* DNS Cache Buster
+
+### 💣 Layer 4 (L4) & Protocol Attacks
+
+* UDP / TCP Flood
+* ACK/RST Flood
+* SYN Cookie Bypass
+* Ping of Death / Smurf / Xmas Tree
+* IP Spoofed SYN Flood
+* Reflected ICMP / GRE Flood
+* Fragmentation Flood
+
+### 📡 Amplification (AMP)
+
+* DNS / SSDP / NTP / Memcached
+* LDAP / CLDAP / SNMP / VSE (Source Engine)
+
+### 🧠 Utility Tools
+
+* TOR IP Cycling
+* Port Scanning
+* Payload Editor + Macro Engine
+* Interactive Header Builder
+* RPS & Thread Calculator
+* Live Real-Time Stats Dashboard
+* Auto Retry for 403/429 Responses
+
+### 🕵 Recon & Analysis
+
+* Reverse DNS & ASN Lookup
+* WHOIS Lookup
+* IP Range Scanner
+* CDN Detection
+* JA3/TLS Fingerprint Generator
+* Real IP Resolver (behind proxies)
+
+### 🧬 Protocol-Specific
+
+* Modbus/SCADA Packet Flood
+* SIP/VoIP INVITE Flood
+* Steam A2S Flood (Source Engine)
+
+### 🧩 Web Application Tools
+
+* Web App Fuzzers for SQLi, XSS, Path Traversal
+* Automated payload injection with status code monitor
 
 ---
 
-## 📦 Installation
+## 🔧 Installation
 
-1. **Clone the repo** or download the script manually.
+### 1. Clone the repository
 
 ```bash
-git clone https://github.com/KetaGod/K-Hole.git
-cd k-hole
+git clone https://github.com/yourname/khole.git
+cd khole
 ```
 
-2. **Install Python dependencies**:
+### 2. Install Python requirements
 
 ```bash
 pip install -r requirements.txt
 ```
 
----
-
-## 🔧 Requirements
-
-* Python 3.8+
-* Compatible on Windows, macOS, and Linux
-
-Dependencies (from `requirements.txt`):
-
-* `aiohttp`
-* `aiohttp-socks`
-* `cloudscraper`
-* `colorama`
-* `dnspython`
-* `fake-useragent`
-* `stem`
+You may need additional system-level tools for headless browser testing (e.g., Chrome/Chromedriver).
 
 ---
 
-## 🛠️ Usage
+## 🖥️ Running K-HOLE
+
+Run with full menu-driven interaction:
 
 ```bash
-python khole.py --help
+python khole.py
 ```
 
-Example:
+Or launch specific attacks via CLI mode:
 
 ```bash
-python khole.py --method http --target https://your-website.com --threads 100 --duration 60
+python khole.py --mode http --target http://example.com --duration 60 --threads 50
 ```
 
 ---
 
-## 📁 File Structure
+## 🗂️ Configuration Profiles
 
+You can load `.khcfg` or `.json` profiles that predefine attack parameters:
+
+```json
+{
+  "mode": "udp",
+  "target": "1.2.3.4",
+  "port": 80,
+  "duration": 120,
+  "threads": 100
+}
 ```
-├── khole.py               # Main toolkit script
-├── requirements.txt       # Python dependencies
-└── README.md              # You're reading it
+
+---
+
+## 📊 Live Monitoring
+
+Use the built-in dashboard for live stats:
+
+```bash
+> Misc Tools > Live Stats Dashboard
 ```
 
----
-
-## ⚠️ Disclaimer
-
-This software is provided **as-is** and is intended only for ethical use by professionals. The author is not responsible for any damage, loss, or misuse of the tool. Always get **explicit permission** before testing.
+Displays ongoing metrics for HTTP/TCP/UDP/amplification/etc.
 
 ---
 
-## 💬 Contact / Support
+## ⚙️ Modules Included
 
-If you're looking to extend the tool or contribute improvements, feel free to open an issue or PR on the GitHub repository.
+Supports:
+
+* `aiohttp`, `aiocoap`
+* `requests`, `cloudscraper`, `websockets`
+* `stem`, `ipaddress`, `dnspython`
+* `selenium`, `undetected_chromedriver`
+* And many others
 
 ---
 
-## 🧠 Credits
+## 🤖 Developer Notes
 
-Coded by \[♡KetaGod♡]
+* All modules are modularized for future expansion
+* Easily add new methods by defining and wiring them into the method map
+* Built-in utilities assist in header manipulation and payload crafting
 
 ---
+
+## 👑 Credits
+
+Coded by **♡KetaGod♡**
+
+* [Telegram](https://t.me/ketagod)
+
+Special thanks to all open-source contributors and module authors.
