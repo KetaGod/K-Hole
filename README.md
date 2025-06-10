@@ -16,9 +16,9 @@ J__L \__L     J__L  J__LJ\______/FJ________LJ________L
 
 ---
 
-## 📦 Features Overview
+##  Features Overview
 
-### 🔥 Layer 7 (L7) Attack Methods
+###  Layer 7 (L7) Attack Methods
 
 * HTTP Flood (Sync & Async)
 * WebSocket Flood
@@ -32,7 +32,7 @@ J__L \__L     J__L  J__LJ\______/FJ________LJ________L
 * SQL Slam Injection Burst
 * DNS Cache Buster
 
-### 💣 Layer 4 (L4) & Protocol Attacks
+###  Layer 4 (L4) & Protocol Attacks
 
 * UDP / TCP Flood
 * ACK/RST Flood
@@ -42,12 +42,12 @@ J__L \__L     J__L  J__LJ\______/FJ________LJ________L
 * Reflected ICMP / GRE Flood
 * Fragmentation Flood
 
-### 📡 Amplification (AMP)
+###  Amplification (AMP)
 
 * DNS / SSDP / NTP / Memcached
 * LDAP / CLDAP / SNMP / VSE (Source Engine)
 
-### 🧠 Utility Tools
+###  Utility Tools
 
 * TOR IP Cycling
 * Port Scanning
@@ -57,7 +57,7 @@ J__L \__L     J__L  J__LJ\______/FJ________LJ________L
 * Live Real-Time Stats Dashboard
 * Auto Retry for 403/429 Responses
 
-### 🕵 Recon & Analysis
+###  Recon & Analysis
 
 * Reverse DNS & ASN Lookup
 * WHOIS Lookup
@@ -66,20 +66,20 @@ J__L \__L     J__L  J__LJ\______/FJ________LJ________L
 * JA3/TLS Fingerprint Generator
 * Real IP Resolver (behind proxies)
 
-### 🧬 Protocol-Specific
+###  Protocol-Specific
 
 * Modbus/SCADA Packet Flood
 * SIP/VoIP INVITE Flood
 * Steam A2S Flood (Source Engine)
 
-### 🧩 Web Application Tools
+###  Web Application Tools
 
 * Web App Fuzzers for SQLi, XSS, Path Traversal
 * Automated payload injection with status code monitor
 
 ---
 
-## 🔧 Installation
+##  Installation
 
 ### 1. Clone the repository
 
@@ -98,7 +98,7 @@ You may need additional system-level tools for headless browser testing (e.g., C
 
 ---
 
-## 🖥️ Running K-HOLE
+## 🖥 Running K-HOLE
 
 Run with full menu-driven interaction:
 
@@ -114,7 +114,7 @@ python khole.py --mode http --target http://example.com --duration 60 --threads 
 
 ---
 
-## 🗂️ Configuration Profiles
+##  Configuration Profiles
 
 You can load `.khcfg` or `.json` profiles that predefine attack parameters:
 
@@ -130,7 +130,7 @@ You can load `.khcfg` or `.json` profiles that predefine attack parameters:
 
 ---
 
-## 📊 Live Monitoring
+##  Live Monitoring
 
 Use the built-in dashboard for live stats:
 
@@ -142,7 +142,7 @@ Displays ongoing metrics for HTTP/TCP/UDP/amplification/etc.
 
 ---
 
-## ⚙️ Modules Included
+## ⚙ Modules Included
 
 Supports:
 
@@ -153,7 +153,7 @@ Supports:
 
 ---
 
-## 🤖 Developer Notes
+##  Developer Notes
 
 * All modules are modularized for future expansion
 * Easily add new methods by defining and wiring them into the method map
@@ -161,7 +161,7 @@ Supports:
 
 ---
 
-## 👑 Credits
+##  Credits
 
 Coded by **♡KetaGod♡**
 
